@@ -146,8 +146,9 @@
       "label": "S"
     },
     {
-      "keyCode": 7,
-      "label": "D"
+      "keyCode": 2838,
+      "label": "S",
+      "extraLabel": "Meh+"
     },
     {
       "keyCode": 9,
@@ -447,7 +448,7 @@
       15,
       15,
       15,
-      15,
+      0,
       15,
       15,
       15,
