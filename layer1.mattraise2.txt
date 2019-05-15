@@ -63,8 +63,8 @@
       "verbose": "Backspace"
     },
     {
-      "keyCode": 43,
-      "label": "Tab"
+      "keyCode": 76,
+      "label": "Del"
     },
     {
       "keyCode": 20,
