@@ -302,9 +302,9 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 0,
-      "label": "XXX",
-      "verbose": "Disabled"
+      "keyCode": 17409,
+      "label": "1",
+      "extraLabel": "LockTo"
     },
     {
       "keyCode": 17451,
@@ -478,10 +478,10 @@
       15,
       15,
       2,
-      15,
+      0,
       2,
       2,
-      15,
+      0,
       15,
       15,
       15,
