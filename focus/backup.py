@@ -5,8 +5,7 @@ import argparse
 
 def run_cmd(ser, cmd):
     print(cmd)
-    ser.write (cmd)
-    ser.write ("\n")
+    ser.write (cmd + "\n")
     output = ""
     while True:
         resultLine = ser.readline ()
@@ -36,16 +35,17 @@ if __name__ == '__main__':
 
     if not (args.backup or args.restore or args.custom):
         exit("must choose either backup or restore")
-
+    settings = ["keymap.custom", "colormap.map", "palette", "keymap.onlyCustom", "hardware.keyscan", 
+                "idleLeds.idleTimeLimit", "led.mode"]
     with serial.Serial (args.port, 9600, timeout = 1) as ser:
         if args.backup:
-            for conf in ["keymap.custom", "colormap.map", "palette", "keymap.onlyCustom"]:
+            for conf in settings:
                 with open(args.filename + conf, 'w') as fh:
                     data = run_cmd(ser, conf)
                     fh.write(data + "\n")
             
         if args.restore: 
-            for conf in ["keymap.custom", "colormap.map", "palette", "keymap.onlyCustom"]:
+            for conf in settings:
                 with open(args.filename + conf, 'r') as fh:
                     data = fh.readline()
                     data = data.strip()
